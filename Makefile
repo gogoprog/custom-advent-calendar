@@ -1,0 +1,2 @@
+dev:
+	haxe build.hxml
