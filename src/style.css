@@ -1,0 +1,110 @@
+body {
+  background-color: #97e49d;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.cac {
+  font-family: "Lobster";
+  color: #fff;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
+  font-size: 24px;
+  text-align: center;
+}
+
+.day {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+}
+
+.day span {
+  position: absolute;
+  bottom: 10px;
+  left: 30px;
+}
+
+.gift {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 2px 2px 4px 4px / 2px 2px 16px 16px;
+  background: linear-gradient(to top, transparent 0px, rgba(255, 255, 255, 0.3)), linear-gradient(to top, transparent 0px, rgba(255, 255, 255, 0.3)), linear-gradient(to top, transparent 0px, rgba(255, 255, 255, 0.35)), linear-gradient(to top, rgba(0, 0, 0, 0.4) 0px, rgba(0, 0, 0, 0.1)), linear-gradient(to top, transparent 70px, rgba(0, 0, 0, 0.6) 80px), linear-gradient(to top, transparent 70px, rgba(0, 0, 0, 0.6) 80px), linear-gradient(to right, #338833 0px, #33BB33 34px, #FF0000 34px, #FF0000 36px, #FFFF00 36px, #FFFF00 38px, #FF0000 38px, #FF0000 62px, #FFFF00 62px, #FFFF00 64px, #FF0000 64px, #FF0000 66px, #33BB33 66px, #338833 100px), linear-gradient(to right, #338833 0px, #33BB33 32px, #FF0000 32px, #FF0000 34px, #FFFF00 34px, #FFFF00 36px, #FF0000 36px, #FF0000 60px, #FFFF00 60px, #FFFF00 62px, #FF0000 62px, #FF0000 64px, #33BB33 64px, #338833 100px);
+  background-size: 34px 5px, 36px 5px, 32px 20px, 96px 80px, 32px 80px, 32px 80px, 100px 20px, 96px 80px;
+  background-position: 0px 0px, 66px 0px, 34px 0px, 2px 20px, 2px 20px, 66px 20px, 0px 0px, 2px 20px;
+  background-repeat: no-repeat;
+  box-shadow: 0px 20px 40px -18px rgba(0, 0, 0, 0.25), 0px -20px 15px -10px rgba(0, 0, 0, 0.2);
+}
+
+.gift:before {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  content: '';
+  top: -105px;
+  left: -20px;
+  z-index: -1;
+  width: 32px;
+  height: 40px;
+  border-radius: 10px 5px 0px 0px;
+  box-shadow: inset -4px 5px 10px rgba(255, 255, 255, 0.5);
+  background: linear-gradient(to right, transparent 0px, #FF0000 0px, #FF0000 2px, #FFFF00 2px, #FFFF00 4px, #FF0000 4px, #FF0000 28px, #FFFF00 28px, #FFFF00 30px, #FF0000 30px, #FF0000 32px, transparent 32px);
+  background-size: 32px 40px;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  transform: rotateZ(-30deg) scale(0.8, 1);
+}
+
+.gift:after {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  content: '';
+  top: -90px;
+  right: -20px;
+  z-index: -1;
+  width: 32px;
+  height: 40px;
+  border-radius: 5px 10px 0px 0px;
+  box-shadow: inset -5px 5px 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to right, transparent 0px, #FF0000 0px, #FF0000 2px, #FFFF00 2px, #FFFF00 4px, #FF0000 4px, #FF0000 28px, #FFFF00 28px, #FFFF00 30px, #FF0000 30px, #FF0000 32px, transparent 32px);
+  background-size: 32px 40px;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  transform: rotateZ(25deg) scale(0.75, 1);
+}
+
+.opened-gift {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 2px 2px 4px 4px / 2px 2px 16px 16px;
+  background: linear-gradient(to top, transparent 20px, rgba(255, 255, 255, 0.3)),
+  linear-gradient(to top, transparent 20px, rgba(255, 255, 255, 0.3)),
+  linear-gradient(to top, transparent 20px, rgba(255, 255, 255, 0.35)),
+  linear-gradient(to top, rgba(0, 0, 0, 0.4) 0px, rgba(0, 0, 0, 0.1)),
+  linear-gradient(to top, transparent 70px, rgba(0, 0, 0, 0.6) 80px),
+  linear-gradient(to top, transparent 70px, rgba(0, 0, 0, 0.6) 80px),
+  linear-gradient(to right, #338833 0px, #33BB33 34px, #FF0000 34px, #FF0000 36px, #FFFF00 36px, #FFFF00 38px, #FF0000 38px, #FF0000 62px, #FFFF00 62px, #FFFF00 64px, #FF0000 64px, #FF0000 66px, #33BB33 66px, #338833 100px), linear-gradient(to right, #338833 0px, #33BB33 32px, #FF0000 32px, #FF0000 34px, #FFFF00 34px, #FFFF00 36px, #FF0000 36px, #FF0000 60px, #FFFF00 60px, #FFFF00 62px, #FF0000 62px, #FF0000 64px, #33BB33 64px, #338833 100px);
+  background-size: 34px 5px, 36px 5px, 32px 20px, 96px 80px, 32px 80px, 32px 80px, 100px 0px, 96px 80px;
+  background-position: 0px 0px, 66px 0px, 34px 0px, 2px 20px, 2px 20px, 66px 20px, 0px 0px, 2px 20px;
+  background-repeat: no-repeat;
+  /* box-shadow: 0px 20px 40px -18px rgba(0, 0, 0, 0.25), 0px -20px 15px -10px rgba(0, 0, 0, 0.2); */
+}

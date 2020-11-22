@@ -5,13 +5,17 @@
   <meta charset="UTF-8">
   <title>Custom Advent Calendar</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
 </head>
 
 <body>
   <script src="../build/cac.js"></script>
 
+  <div id="root" class="cac">
+  </div>
+
   <script>
-    cac.initialize();
+    cac.initialize(document.getElementById("root"));
   </script>
 </body>
 
