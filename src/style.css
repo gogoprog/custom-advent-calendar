@@ -2,14 +2,11 @@ body {
   background-color: #97e49d;
   margin-left: 10%;
   margin-right: 10%;
-}
-
-.cac {
   font-family: "Lobster";
   color: #fff;
-  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
   font-size: 24px;
   text-align: center;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
 }
 
 .day {
@@ -23,6 +20,7 @@ body {
   position: absolute;
   bottom: 1px;
   left: 6px;
+  user-select: none;
 }
 
 .gift {
@@ -113,33 +111,62 @@ body {
     transform: translate(3px, 3px) rotate(0deg);
   }
   10% {
-    transform: translate(-3px, -6px) rotate(-1deg);
+    transform: translate(-3px, -6px) rotate(-2deg);
   }
   20% {
-    transform: translate(-9px, 0px) rotate(1deg);
+    transform: translate(-9px, 0px) rotate(2deg);
   }
   30% {
     transform: translate(9px, 6px) rotate(0deg);
   }
   40% {
-    transform: translate(3px, -3px) rotate(1deg);
+    transform: translate(3px, -3px) rotate(2deg);
   }
   50% {
-    transform: translate(-3px, 6px) rotate(-1deg);
+    transform: translate(-3px, 6px) rotate(-2deg);
   }
   60% {
     transform: translate(-9px, 3px) rotate(0deg);
   }
   70% {
-    transform: translate(9px, 3px) rotate(-1deg);
+    transform: translate(9px, 3px) rotate(-2deg);
   }
   80% {
-    transform: translate(-3px, -3px) rotate(1deg);
+    transform: translate(-3px, -3px) rotate(2deg);
   }
   90% {
     transform: translate(3px, 6px) rotate(0deg);
   }
   100% {
-    transform: translate(3px, -6px) rotate(-1deg);
+    transform: translate(3px, -6px) rotate(-2deg);
   }
+}
+
+.message {
+  position: fixed;
+  /* display: flex; */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  top: 50%;
+  background-color: rgba(250, 55, 55, 0.8);
+  min-height: 40%;
+  min-width: 60%;
+  font-size: 32px;
+  transition: all 1.0s ease-in-out;
+  transform: translate(-50%, -50%) scale(0, 0);
+  text-align: center;
+}
+
+.message span {
+  position: absolute;
+  top: 1px;
+  left: 3px;
+}
+
+.message {}
+
+.message.appear {
+  transform: translate(-50%, -50%) scale(1, 1);
 }
