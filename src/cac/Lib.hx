@@ -11,13 +11,23 @@ class Lib {
         initialize(document.getElementById("root"));
     }
 
-    static public function initialize(root:js.html.Element) {
+    static private function getCurrentDay():Int {
         var currentDay = -666;
         var today = Date.now();
 
         if(today.getMonth() == 11) {
             currentDay = today.getDate() - 1;
         }
+
+        if(untyped window.hack != null) {
+            return untyped window.hack - 1;
+        }
+
+        return currentDay;
+    }
+
+    static public function initialize(root:js.html.Element) {
+        var currentDay = getCurrentDay();
 
         for(i in 0...24) {
             var e = document.createElement("div");
@@ -37,14 +47,13 @@ class Lib {
                     gift.appendChild(span);
                 }
 
-                if(i <= currentDay) {
-                    gift.addEventListener("click", function(e) {
+                gift.addEventListener("click", function(e) {
+                    if(i <= getCurrentDay()) {
                         openDay(i);
                         gift.className = "gift opened-gift";
                         e.stopPropagation();
-                    });
-                }
-
+                    }
+                });
                 e.appendChild(gift);
             }
             root.appendChild(e);
@@ -80,7 +89,7 @@ class Lib {
         var span = document.querySelector(".message span");
         span.innerText = "" + (index+1);
         var p = document.querySelector(".message p");
-        p.innerText = data.days[index];
+        p.innerHTML = data.days[index];
         message.style.display = "flex";
         haxe.Timer.delay(function() {
             message.className = "message appear";
