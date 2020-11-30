@@ -82,6 +82,14 @@ class Lib {
     static private function applyData(data) {
         document.getElementById("title").innerText = data.title;
         Lib.data = data;
+
+        if(data.music != null) {
+            var audio = new js.html.Audio(data.music);
+            audio.loop = true;
+            document.addEventListener("click", () -> {
+                audio.play();
+            });
+        }
     }
 
     static private function openDay(index:Int) {

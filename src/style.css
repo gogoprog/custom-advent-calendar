@@ -165,7 +165,9 @@ body {
   left: 3px;
 }
 
-.message {}
+.message p {
+  margin:32px;
+}
 
 .message.appear {
   transform: translate(-50%, -50%) scale(1, 1);
