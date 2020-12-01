@@ -64,6 +64,9 @@ class Lib {
     }
 
     static private function getParameter(name:String):String {
+        if(untyped window[name] != null) {
+            return untyped window[name];
+        }
         var urlString = window.location.href;
         var url = new js.html.URL(urlString);
         return url.searchParams.get(name);

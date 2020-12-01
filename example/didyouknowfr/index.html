@@ -9,11 +9,21 @@
 </head>
 
 <body>
-  <script>
-    document.location.href = "../../src?data=../example/didyouknowfr/data.json";
-  </script>
-  <div class="gift closed-gift">
+
+  <div id="root" class="cac">
+    <h1 id="title"></h1>
   </div>
+
+  <div id="message" class="message">
+    <span>#</span>
+    <p>
+    </p>
+  </div>
+  <script>
+    window.data = "./data.json";
+  </script>
+
+  <script src="../../build/cac.min.js"></script>
 </body>
 
 </html>
